@@ -9,7 +9,7 @@ tmux split-window -v
 tmux send-keys -t bebop:0.0 'cd ~/dev/robotics/bebop_autonomy_image && ./launch.sh' C-m
 
 # Run the ROS 2 nodes in the bottom pane
-tmux send-keys -t bebop:0.1 'sleep 10 && ros2 launch bebop_bringup bebop_bringup.launch.py' C-m
+tmux send-keys -t bebop:0.1 'ros2 launch bebop_bringup bebop_bringup.launch.py' C-m
 
 # Attach to the tmux session
 tmux attach -t bebop
